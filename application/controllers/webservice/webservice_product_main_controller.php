@@ -32,11 +32,18 @@ class Webservice_product_main_controller extends Init_webservice_controller {
 			$result = array();
 			foreach($result_list as $item){
 				// print_r($item);echo "<HR>";
-				$obj = array();
-				$obj["product_main_aid"] = get_array_value($item,"aid","");
-				$obj["product_main_name"] = get_array_value($item,"name","");
-				$obj["product_main_url"] = get_array_value($item,"url","");
-				$result[] = $obj;
+				$arr = array('3', '4', '5', '6');
+				if(in_array(get_array_value($item,"aid","0"), $arr))
+				{
+					$obj = array();
+					$obj["product_main_aid"] = get_array_value($item,"aid","");
+					$obj["product_main_name"] = get_array_value($item,"name","");
+					$obj["product_main_url"] = get_array_value($item,"url","");
+					$obj["product_main_image_1x"] = BASE_URL.'uploads/'.CONST_CODENAME.'/main_product_images/'.get_array_value($item,"url","").'.png';
+					$obj["product_main_image_2x"] = BASE_URL.'uploads/'.CONST_CODENAME.'/main_product_images/'.get_array_value($item,"url","").'@2x.png';
+					$obj["product_main_image_3x"] = BASE_URL.'uploads/'.CONST_CODENAME.'/main_product_images/'.get_array_value($item,"url","").'@3x.png';
+					$result[] = $obj;
+				}
 			}
 		
 			$result_obj = array("status" => 'success',"msg" => '', "result" => $result);

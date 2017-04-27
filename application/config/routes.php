@@ -222,6 +222,9 @@ $route['webservice/get_my_reserve_list'] = "webservice/webservice_reserve_contro
 $route['webservice/cancel_my_reserve'] = "webservice/webservice_reserve_controller/cancel_my_reserve";
 $route['webservice/confirm_my_reserve'] = "webservice/webservice_reserve_controller/confirm_my_reserve";
 $route['webservice/get_noti_reserve_list'] = "webservice/webservice_reserve_controller/get_noti_reserve_list";
+$route["webservice/get_banner"] = "webservice/webservice_banner_controller/get_banner";
+$route["webservice/ads/get_ads_by_category_cid"] = "webservice/webservice_ads_controller/get_ads_by_category_cid";
+
 
 $route['admin/reservation-(product|digital)'] = "product/reserve_back_controller/index/$1";
 $route['admin/reservation-(product|digital)/show'] = "product/reserve_back_controller/show/$1";
