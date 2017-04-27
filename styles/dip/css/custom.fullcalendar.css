@@ -1,0 +1,49 @@
+/* Override Calendar */
+.fc-toolbar h2 {
+  font-size: 22px;
+}
+.fc-toolbar button {
+  height: 2.5em !important;
+  text-transform: uppercase;
+  padding: 0 0.8em !important;
+}
+.fc-toolbar button.fc-state-default {
+  color: #333;
+  /*background-color: #484848;
+  color: #FFFFFF;
+  background-image: none;
+  border: 1px solid #666;*/
+}
+.fc-toolbar button.fc-state-active {
+  /*background-color: #484848;
+  color: #a4cb41 !important;*/
+}
+.fc th {
+    background-color: #009ddc;
+    font-family: "Roboto",sans-serif;
+    font-weight: normal;
+    padding-top: 4px;
+    /* background-color: #a4cb41; */
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.fc-event {
+  border-radius: 0;
+}
+.fc-day-grid-event {
+    margin: 1px 2px 0;
+    padding: 3px;
+}
+.fc-day-grid-event.fc-past {
+  background-color: #878787 !important;
+  border-color: #878787 !important;
+}
+.fc-day-grid-event.fc-today {
+  background-color: #FF7C27 !important;
+  border-color: #FF7C27 !important;
+}
+.fc-day-grid-event.fc-future {
+  background-color: #A0C64B !important;
+  border-color: #A0C64B !important;
+}
