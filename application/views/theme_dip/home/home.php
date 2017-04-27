@@ -590,7 +590,7 @@ if (is_var_array($product_home_result)) {
 
         ?>
         <section id="projects" style="margin-top:25px;">
-            <div class="container mt15 <?= $class ?>-box <?php if(get_array_value($item, "product_main_id", "-")=="1" || get_array_value($item, "product_main_id", "-")=="8"){ echo "hide"; }?>">
+            <div class="container mt15 <?= $class ?>-box <?php if(get_array_value($item, "product_main_id", "-")=="1" || get_array_value($item, "product_main_id", "-")=="2" || get_array_value($item, "product_main_id", "-")=="7"  || get_array_value($item, "product_main_id", "-")=="8" || get_array_value($item, "product_main_id", "-")=="9"){ echo "hide"; }?>">
                 <div class="row">
                     <div class="col-xs-9">
                         <?php

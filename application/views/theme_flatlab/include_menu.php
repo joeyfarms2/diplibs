@@ -175,13 +175,13 @@ $this_action = @thisAction;
 			<?php } ?>
 
 			<!-- Gallery Menu -->
-			<?php if(CONST_HAS_GALLERY=='1'){?>
-			<li class="sub-menu">
-				<a href="javascript:;" class="<?=($this_admin_tab_menu == 'gallery') ? 'active' : '' ;?>">
-					<i class="fa fa fa-bullhorn"></i>
-					<span><?=get_language_line($this, 'ui_backend_menu_gallery', 'Gallery')?><!-- Gallery --></span>
-				</a>
-			</li>
+			<?php if(CONST_HAS_GALLERY == '1'){?>
+				<li class="sub-menu">
+					<a href="javascript:;" class="<?=($this_admin_tab_menu == 'gallery') ? 'active' : '' ;?>">
+						<i class="fa fa fa-bullhorn"></i>
+						<span><?=get_language_line($this, 'ui_backend_menu_gallery', 'Gallery')?><!-- Gallery --></span>
+					</a>
+				</li>
 
 			<?php }?>
 
