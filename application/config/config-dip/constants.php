@@ -231,7 +231,7 @@ define('CONST_ADS_MODE','1'); // 1:Full mode, 2:Simple mode, default is 1
 | Gallery Setting
 |--------------------------------------------------------------------------
 */
-define('CONST_HAS_GALLERY','1'); // 1:Use Gallery system, 0:DONT use Gallery system, default is 0
+define('CONST_HAS_GALLERY','0'); // 1:Use Gallery system, 0:DONT use Gallery system, default is 0
 
 
 /*
@@ -290,14 +290,14 @@ define('CONST_BASKET_EMPTY','<p>Your basket is empty</p>');
 | Transaction Module
 |--------------------------------------------------------------------------
 */
-define('CONST_HAS_TRANSACTION', '1'); // 1:Use transaction system, 0:DONT use transaction system, default is 0
+define('CONST_HAS_TRANSACTION', '0'); // 1:Use transaction system, 0:DONT use transaction system, default is 0
 define('CONST_MAX_ALLOW_BORROWING_BOOK', '3');
 define('CONST_MAX_ALLOW_BORROWING_CD', '3');
 define('CONST_DEFAULT_BORROWING_PERIOD', '7');
 define('CONST_DEFAULT_FINE_FEE', '5');
 define('CONST_DEFAULT_RENTAL_FEE', '0');
 define('CONST_MAX_BORROWING_RENEW', '1');
-define('CONST_HAS_PRINT', '1'); // 1:Use PRINT system, 0:DONT use PRINT system, default is 0
+define('CONST_HAS_PRINT', '0'); // 1:Use PRINT system, 0:DONT use PRINT system, default is 0
 /***** End : Transaction Module *****/
 /***your-library*/
 define('CONST_FRONT_BOOK_MENU','0');//1:Show 0:Hide
