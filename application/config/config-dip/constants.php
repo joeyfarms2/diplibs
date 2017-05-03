@@ -49,19 +49,19 @@ define('DEFAULT_TITLE', 'กรมทรัพย์สินทางปัญ�
 define('META_DESCRIPTION', '');
 define('META_KEYWORDS', '');
 
-define('ADMIN_EMAIL', 'noreply@nialib.com'); // This is an email will show in automatic mail sent.
+define('ADMIN_EMAIL', 'noreply@ipthailand.go.th'); // This is an email will show in automatic mail sent.
 define('ADMIN_EMAIL_NAME', 'ห้องสมุดสื่อทรัพยากรออนไลน์'); // This is name will show in automatic mail sent.
 define('ADMIN_EMAIL_SIGNATURE', 'ห้องสมุดสื่อทรัพยากรออนไลน์'); // This is signature will show in automatic mail sent.
 
-define('CONTACT_EMAIL', 'nia.library@nia.go.th'); // This is an email that user can send feedback or ask for your support.
-define('MAIN_CONTACT_EMAIL', 'nia.library@nia.go.th'); // This is an email that user can send feedback or ask for your support
+define('CONTACT_EMAIL', 'dip.library@ipthailand.go.th'); // This is an email that user can send feedback or ask for your support.
+define('MAIN_CONTACT_EMAIL', 'dip.library@ipthailand.go.th'); // This is an email that user can send feedback or ask for your support
 
 define('CONST_MAIN_DOMAIN_EMAIL', '1');
-define('MAIN_DOMAIN_EMAIL', 'nia.go.th'); 
+define('MAIN_DOMAIN_EMAIL', 'ipthailand.go.th');
 define('CONST_FB_LINK', ''); // This is an facebook link
-define('WEB_URL', 'http://www.nialib.com');
+define('WEB_URL', 'http://elibrary.ipthailand.go.th');
 
-define("GOOGLE_API_KEY", "AIzaSyAOJ4AMhv6DNFJeu28BeLo9oLjAAaU1dsE"); // Place your Google API Key
+define("GOOGLE_API_KEY", "AIzaSyBexy4QhbXbwGsuS85GQ4VI1KjHYnkGsd4"); // Place your Google API Key
 /** End of Editable Zone **/
 
 /***********************************************************************************************************/

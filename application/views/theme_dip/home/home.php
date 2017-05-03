@@ -353,9 +353,10 @@ $news_highlight_list = @$news_highlight_list;
     <div class="container mt15">
         <div class="row">
             <div class="col-md-8 pln">
-                <div style="margin:20px auto;"><img class="img-responsive"
-                                                    src="<?= CSS_PATH ?><?= CONST_CODENAME ?>/images/background/header_news.png">
-                </div>
+                <h2><span class="textStart">N</span>ews | All Latest News</h2>
+<!--                <div style="margin:20px auto;"><img class="img-responsive"-->
+<!--                                                    src="--><?//= CSS_PATH ?><!----><?//= CONST_CODENAME ?><!--/images/background/header_news.png">-->
+<!--                </div>-->
             </div>
         </div>
         <?php if (is_var_array($latest_news_result)) { ?>
