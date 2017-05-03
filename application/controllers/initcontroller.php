@@ -426,9 +426,9 @@ class Initcontroller extends CI_Controller
         //       $config['mailpath']            = "/usr/bin/sendmail"; // or "/usr/sbin/sendmail"
         $config['protocol'] = 'smtp';
         //$config['smtp_host'] = '27.254.144.144';
-        $config['smtp_host'] = 'www.nialib.com';
-        $config['smtp_user'] = 'noreply@nialib.com';
-        $config['smtp_pass'] = 'cIv1ny5Xi';
+        $config['smtp_host'] = 'www.belibs.com';
+        $config['smtp_user'] = 'noreply-test@belibs.com';
+        $config['smtp_pass'] = 'Cy12hhSq';
         $config['smtp_port'] = '25';
         $config['smtp_timeout'] = '25';
         $config['mailtype'] = 'html';

@@ -22,7 +22,7 @@ class Product_main_back_controller extends Product_init_controller {
 		
 		$this->load->model($this->product_type_model,"product_type");
 		$this->data["master_product_type"] = $this->product_type->load_product_types();
-        $this->data["master_product_main_menu"] = $this->Product_main_model->load_product_mains();
+//        $this->data["master_product_main_menu"] = $this->Product_main_model->load_product_mains();
 
 		
 	}

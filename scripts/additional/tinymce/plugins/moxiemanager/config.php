@@ -13,7 +13,7 @@
 
 	// Filesystem
 	// $moxieManagerConfig['filesystem.rootpath'] = './data/files';
-	$moxieManagerConfig['filesystem.rootpath'] = '../../../../../uploads/'.CONST_CODENAME.'/userfiles';
+	$moxieManagerConfig['filesystem.rootpath'] = '../../../../../uploads/dip/userfiles';
 	$moxieManagerConfig['filesystem.include_directory_pattern'] = '';
 	$moxieManagerConfig['filesystem.exclude_directory_pattern'] = '/^mcith$/i';
 	$moxieManagerConfig['filesystem.include_file_pattern'] = '';

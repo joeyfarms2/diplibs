@@ -33,7 +33,7 @@
 							Library Fax : 0-2282-6803
 						</div>
 						<div class="col-xs-12" >
-							E-mail : nia.library@nia.go.th
+							E-mail : nia.library@elibrary.ipthailand.go.th
 						</div>		
 					</div>
 				</div>
