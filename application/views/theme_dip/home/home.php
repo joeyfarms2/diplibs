@@ -380,7 +380,7 @@ $news_highlight_list = @$news_highlight_list;
                             </a>
                         </div>
                     <?php } else { ?>
-                        ERROR!
+
                     <?php } ?>
                     <div class="col-xs-12">
                         <div>

@@ -141,6 +141,7 @@ if ($product_type_aid == "2") {
 <!--End Event calendar-->
 
     <!-- Start : Popular News box -->
+    <?php if(CONST_POPULAR_NEWS=='1'){ ?>
     <?php if (is_var_array($news_popular_list)) { ?>
         <div class="separator"></div>
 
@@ -214,10 +215,12 @@ if ($product_type_aid == "2") {
 
         </div>
     <?php } ?>
+    <?php }?>
     <!-- End : Popular News box -->
 
 
     <!-- Start : Recommended box -->
+    <?php if(CONST_NEWS_RECOMMENDED=='1'){ ?>
     <?php if (is_var_array($news_recommended_list)) { ?>
         <div class="separator"></div>
 
@@ -282,10 +285,12 @@ if ($product_type_aid == "2") {
 
         </div>
     <?php } ?>
+    <?php }?>
     <!-- End : Recommended box -->
 
 
     <!-- Start : Talk of the town box -->
+    <?php if(CONST_NEWS_TALK_OF_THE_TOWN=='1'){ ?>
     <?php if (is_var_array($news_talk_of_the_town_list)) { ?>
         <div class="separator"></div>
 
@@ -357,6 +362,7 @@ if ($product_type_aid == "2") {
 
         </div>
     <?php } ?>
+    <?php }?>
     <!-- End : Talk of the town box -->
 
 

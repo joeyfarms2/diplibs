@@ -192,6 +192,10 @@ define('CONST_NEWS_SIZE_HEIGHT_ACTUAL','0'); // in pixel
 define('CONST_ALLOW_FILE_TYPE_FOR_NEWS_IMAGE','jpg|jpeg|gif|png');
 define('CONST_ALLOW_FILE_SIZE_FOR_NEWS_IMAGE','5242880');
 define('CONST_NEWS_DEFAULT_CHECKED_SHOW_IN_HOME','1');
+//Display Home
+define('CONST_POPULAR_NEWS','0'); //1:Show , 0:Hide
+define('CONST_NEWS_RECOMMENDED','0'); //1:Show , 0:Hide
+define('CONST_NEWS_TALK_OF_THE_TOWN','0'); //1:Show , 0:Hide
 /*
 |--------------------------------------------------------------------------
 | Event Setting 
