@@ -640,7 +640,7 @@ class Device_message_back_controller extends Project_init_controller {
 
 				// Open a connection to the APNS server
 				$fp = stream_socket_client(
-					//'ssl://gateway.sandbox.push.apple.com:2195', $err,
+//					'ssl://gateway.sandbox.push.apple.com:2195', $err,
 					'ssl://gateway.push.apple.com:2195', $err,
 					$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx); 
 
@@ -652,7 +652,7 @@ class Device_message_back_controller extends Project_init_controller {
 				$body['aps'] = array(
 					'alert' => $message,
 					'sound' => 'default',
-					'link_url' => "http://www.nialib.com",
+					'link_url' => "http://dip.belibs.com",
   					'category' => "NEWS_CATEGORY",
 					);
 

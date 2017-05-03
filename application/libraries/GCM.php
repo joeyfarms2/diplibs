@@ -66,7 +66,7 @@ class GCM {
 
     public function send_notification_new($registatoin_ids, $message) {
         // include config
-        include_once 'config.php';
+//        include_once 'config.php';
 
         // Set POST variables
         // echo "registatoin_ids = ".$registatoin_ids;
@@ -82,7 +82,7 @@ class GCM {
 
         $headers = array(
             //'Authorization: key='. GOOGLE_API_KEY_NEW,
-            'Authorization: key=AIzaSyAOJ4AMhv6DNFJeu28BeLo9oLjAAaU1dsE',
+            'Authorization: key=AIzaSyBexy4QhbXbwGsuS85GQ4VI1KjHYnkGsd4',
             'Content-Type: application/json'
         );
         // Open connection
