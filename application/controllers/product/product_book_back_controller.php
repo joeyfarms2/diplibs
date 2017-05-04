@@ -160,7 +160,7 @@ class Product_book_back_controller extends Product_init_controller {
 		//tag
 		$all_tag = "";
 		$tag = $this->input->get_post('tag');
-		echo "tag : ".$tag;
+		// echo "tag : ".$tag;
 		if(!is_blank($tag)){
 			$tag = explode(",", $tag);
 			if(is_var_array($tag)){
