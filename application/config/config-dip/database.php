@@ -43,6 +43,12 @@ else if($_SERVER["SERVER_NAME"] == "dip.belibs.com")
     $db['default']['database'] = 'belibs_dip';
     $db['default']['password'] = 'Sxy3hD3s';
 }
+else if($_SERVER["SERVER_NAME"] == "elibrary.ipthailand.go.th")
+{
+    $db['default']['username'] = 'root';
+    $db['default']['database'] = 'belibs_dip';
+    $db['default']['password'] = '[6U8Ffl';
+}
 else{
 	// $db['default']['username'] = 'nialib_belibs';
  // 	$db['default']['database'] = 'nialib_belibs';
