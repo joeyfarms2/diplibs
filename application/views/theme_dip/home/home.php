@@ -4,11 +4,12 @@ $product_home_result = @$product_home_result;
 $news_cat_result = @$news_cat_result;
 
 $latest_news_result = @$latest_news_result;
+$latest_news_result2 = @$latest_news_result2;
 
 $news_highlight_list = @$news_highlight_list;
 
-// echo "<pre>";
-// print_r($latest_news_result);
+/// echo "<pre>";
+//print_r($latest_news_result2);
 // echo "</pre>";
 //print_r($news_highlight_list);
 //$news_recommended_list = @$news_recommended_list;
@@ -25,9 +26,10 @@ $news_highlight_list = @$news_highlight_list;
     }
 
     .img-head-news img {
-        max-width:;
-        min-width:;
-        height: auto;
+        max-width:100%;
+        min-width:25%;
+        max-height:25.6%
+        /*height: auto;*/
     }
 
     .text-center {
@@ -344,28 +346,35 @@ $news_highlight_list = @$news_highlight_list;
         }
 
     }
+    .text-left{
+        float:left;
+    }
+    .text-right{
+        float:right;
+    }
 </style>
 <div id="message-box">
     <div id="result-msg-box" class="hidden"></div>
 </div>
 
 <section id="projects">
+<?php #print_r($latest_news_result);?>
     <div class="container mt15">
         <div class="row">
             <div class="col-md-8 pln">
-                <h2><span class="textStart">N</span>ews | All Latest News</h2>
+                <h2><span class="textStart">N</span>ews</h2>
 <!--                <div style="margin:20px auto;"><img class="img-responsive"-->
 <!--                                                    src="--><?//= CSS_PATH ?><!----><?//= CONST_CODENAME ?><!--/images/background/header_news.png">-->
 <!--                </div>-->
             </div>
         </div>
-        <?php if (is_var_array($latest_news_result)) { ?>
-            <div class="row bg-gray">
-                <?php foreach ($latest_news_result as $item) {
+        <?php if (is_var_array($latest_news_result2)) { ?>
+            <div class="row">
+                <?php foreach ($latest_news_result2 as $item) {
                     if (get_array_value($item, "cover_image_file_type", "") != "") {
                         $cover_image_full_path = './' . get_array_value($item, "cover_image_actual", "");
                         if (file_exists($cover_image_full_path)) { ?>
-                            <div class="col-xs-12 text-center">
+                            <div class="col-xs-12 col-md-5 text-center">
                                 <a href="<?= site_url('news/detail/' . get_array_value($item, "aid", "")) ?>"
                                    class="img-head-news">
                                     <img class="img-responsive"
@@ -374,7 +383,7 @@ $news_highlight_list = @$news_highlight_list;
                             </div>
                         <?php }
                     } else if (get_array_value($item, "dummy_cover_image", "") != "") { ?>
-                        <div class="col-xs-12 text-center">
+                        <div class="col-xs-12 col-md-6 text-center">
                             <a href="<?= site_url('news/detail/' . get_array_value($item, "aid", "")) ?>"
                                class="img-head-news">
                                 <?= get_array_value($item, "dummy_cover_image", "") ?>
@@ -383,7 +392,7 @@ $news_highlight_list = @$news_highlight_list;
                     <?php } else { ?>
 
                     <?php } ?>
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 col-md-6">
                         <div>
                             <a href="<?= site_url('news/detail/' . get_array_value($item, "aid", "")) ?>">
                                 <h3 class="txt-blue latest-news-header"><?= get_array_value($item, "title", "") ?></h3>

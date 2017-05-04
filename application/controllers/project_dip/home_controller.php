@@ -170,7 +170,7 @@ class Home_controller extends Project_init_controller {
 			
 			
 			$tmp_rs = $this->news->load_home_big('', '1' , 0, 1);
-			$this->data['latest_news_result'] = get_array_value($tmp_rs, 'results', '');
+			$this->data['latest_news_result2'] = get_array_value($tmp_rs, 'results', '');
 			
 			$this->load->model($this->news_category_model,"news_cat");
 			$this->data['news_cat_result'] = $this->news_cat->load_news_categories();
