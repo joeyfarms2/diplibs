@@ -589,6 +589,15 @@ function get_file_type($str){
 	return $result;
 }
 
+function getFileType($str){
+	$result = "";
+	if(!is_blank($str)){
+		$result = substr(strrchr($str, "."), 0);
+	}
+	return $result;
+
+}
+
 /****************************************************************/
 /* Create directories
 /* Added by: Oui

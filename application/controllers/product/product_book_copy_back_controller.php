@@ -136,6 +136,7 @@ class Product_book_copy_back_controller extends Product_init_controller {
 		$product_type_aid = $this->data["this_product_type_aid"];
 		$data["product_type_aid"] = $product_type_aid;
 		$title = get_array_value($parent_detail,"title","");
+		$data["digital_file_type"] = getFileType($_FILES['file_upload']['name']);		
 
 		if(CONST_HAS_IPAD_APP == '1'){
 			$data["nonconsume_identifier"] = trim($this->input->get_post('nonconsume_identifier'));
@@ -379,12 +380,53 @@ class Product_book_copy_back_controller extends Product_init_controller {
 		create_empty_folder_to_zip($file_full, $folder_name);
 		*/
 		/*************************************************************/
+			//$filename = $_FILES['file_upload']['name'];
+			// echo $filetype;
+			// $file_type = substr(strrchr($filetype, "."), 0);
+			// echo "<br/> $file_type";
+			// exit();	
+			// echo get_file_type($filename);
+			// echo "<br/>";
+			// echo getFileType($filename);
+			// exit();	
 
-		
+			if( !is_blank(get_array_value($_FILES,"file_upload","")) && !is_blank(get_array_value($_FILES["file_upload"],"name","")) ){
+				$file_name = $_FILES["file_upload"]["name"];
+				$check_fileType = getFileType($file_name);				
+				if($check_fileType==".epub"){
 
-		if( !is_blank(get_array_value($_FILES,"file_upload","")) && !is_blank(get_array_value($_FILES["file_upload"],"name","")) ){
-			$upload_inc_path = $upload_base_path.'tmp';
-			create_directories($upload_inc_path);
+					if(file_exists("./".$upload_path."app"))
+            		{
+                	$objScan = scandir("./".$upload_path."app");
+					
+                		foreach ($objScan as $value) 
+               		 {
+                				unlink("./".$upload_path."app/".$value);
+               			 }
+          			  }
+
+					$upload_path = $upload_base_path.'app';					
+					$file_type = substr(strrchr($file_name, "."), 0);
+					$new_file_name = $cid.$file_type;		
+					$old_file = "./".$upload_path."/".$new_file_name;
+					$result_file_upload = upload_file($this,"file_upload",$upload_path,$new_file_name,CONST_ALLOW_FILE_TYPE_EBOOK,CONST_ALLOW_FILE_SIZE_DEFAULT,'','');
+					$data["file_upload"] = $new_file_name;
+					
+					if ( !is_blank(get_array_value($result_file_upload,"error_msg","")) )
+			{
+				// echo $result_file_upload["error_msg"];
+				$this->log_error('Admin : Product copy', 'Save book copy fail => Upload file error : '.$result_file_upload["error_msg"]);
+				$this->data["message"] = set_message_error(get_array_value($result_file_upload,"error_msg","Sorry, the system can not save data now. Please try again or contact your administrator."));
+				$this->data["js_code"] = "";
+				$this->data["command"] = $command;
+				$this->data["copy_item_detail"] = $data;
+				$this->form($product_main_url, $parent_aid);
+				return"";
+			}
+				
+				}else{
+					$upload_inc_path = $upload_base_path.'tmp';
+					create_directories($upload_inc_path);
 			
 			$copy_result["parent_aid"] = $parent_aid;
 			$copy_result["product_type_aid"] = $product_type_aid;
@@ -403,11 +445,9 @@ class Product_book_copy_back_controller extends Product_init_controller {
             }
 			
 			$pdf_file = $_FILES["file_upload"]["tmp_name"];
-			$output_file = getcwd()."/".$upload_path."tmp/pdf-%04d.pdf";
-			//$string_command = '/usr/local/bin/gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sPDFPassword='.PDF_PASSWORD.' -sOutputFile='.$output_file.' '.$pdf_file;
-			//$string_command = '/usr/local/bin/gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile='.$output_file.' '.$pdf_file;
-			$string_command = '/usr/local/bin/gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile='.$output_file.' '.$pdf_file;
-            //$string_command = 'gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile='.$output_file.' '.$pdf_file;   
+
+			$output_file = getcwd()."/".$upload_path."tmp/pdf-%04d.pdf";			
+			$string_command = '/usr/local/bin/gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -sOutputFile='.$output_file.' '.$pdf_file;              
             exec($string_command);
 			if(self::AES_Encryption(getcwd()."/".$upload_path, $secret_key, $iv))
 			{
@@ -430,9 +470,9 @@ class Product_book_copy_back_controller extends Product_init_controller {
     				
     			}
 			}
-		}	
-	
+				}
 
+			}
 		
 		$data["use_digital_gen"] = $use_digital_gen;
 

@@ -193,16 +193,15 @@ $parent_aid = get_array_value($parent_detail,"aid","");
 						<?php
 							$upload_path = get_array_value($copy_item_detail,"upload_path","")."doc/";
 							$file_upload = get_array_value($copy_item_detail,"file_upload","");
-							// echo "path : ".$upload_path.$file_upload;
+							 //echo "path : ".$upload_path.$file_upload;
 							if(is_file($upload_path.$file_upload)){
 						?>
 						<div class="col-md-12 col-lg-offset-2 col-lg-8 spaceUp">
 								<a href="<?=site_url($upload_path.$file_upload)?>" target="_blank"><?=$file_upload?></a>
 						</div>
 						<?php } ?>
-					</div>
-					
-				
+					</div>					
+			
 					<?php /* AIR EDITED START */ ?>
 					<div class="form-group" id="file_upload_limit_for_digital_gen">
 						<label class="col-md-12 col-lg-2 control-label required" for="digital_file_type">File type</label>
@@ -261,7 +260,7 @@ $parent_aid = get_array_value($parent_detail,"aid","");
 						<label class="col-md-12 col-lg-2 control-label" for="file_upload">File upload</label>
 						<div class="col-md-12 col-lg-8">
 							<input class="default" type="file" id="file_upload" name="file_upload"/>
-							<p class="help-block" id="file_upload_limit_for_default">Only file extension .pdf<span id="file_type_desc"></span> and size not over <?=get_size(CONST_ALLOW_FILE_SIZE_DEFAULT)?>.</p>
+							<p class="help-block" id="file_upload_limit_for_default">Only file extension <?=get_file_type(CONST_ALLOW_FILE_TYPE_EBOOK)?><span id="file_type_desc"></span> and size not over <?=get_size(CONST_ALLOW_FILE_SIZE_DEFAULT)?>.</p>
 						</div>
 					</div>
 					<div class="form-group hide" id="file_upload_ftp_area">

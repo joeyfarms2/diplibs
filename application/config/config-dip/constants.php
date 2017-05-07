@@ -151,6 +151,7 @@ define('CONST_TITLE_SHORT_CHAR','35');
 
 //define('CONST_ALLOW_FILE_TYPE_DEFAULT','pdf|doc|docx|csv|xls|xlsx|pps|ppt|pptx|mov|mp3|mp4|mpeg|flv|wma|jpg|jpeg|gif|png');
 define('CONST_ALLOW_FILE_TYPE_DEFAULT','doc|docx|csv|xls|xlsx|pps|ppt|pptx');
+define('CONST_ALLOW_FILE_TYPE_EBOOK','pdf|epub');
 define('CONST_ALLOW_FILE_SIZE_DEFAULT','52428800');
 define('CONST_ALLOW_FILE_TYPE_FOR_DIGITAL_GEN','zip|pdf');
 define('CONST_ALLOW_FILE_SIZE_FOR_DIGITAL_GEN','52428800');
